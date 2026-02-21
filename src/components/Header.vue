@@ -20,9 +20,9 @@ export default {
 
 <style scoped>
 .header {
-  background-color: #0f5158;
-  color: rgb(242, 255, 2);
-  padding: 1rem 0;
+  background-color: #000000; /* Pure Black as seen in the photo */
+  color: #ffffff;
+  padding: 1.5rem 0; /* Slightly taller for that premium feel */
   position: fixed; 
   top: 0; 
   left: 0; 
@@ -35,30 +35,37 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: center; /* Changed from space-between to center */
+  justify-content: center; 
   align-items: center;
   padding: 0 1rem;
 }
 
 .nav {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem; /* Tighter gap to match the boxed look */
 }
 
 .nav-link {
-  color: rgb(225, 255, 0);
+  color: #888888; /* Muted grey for inactive links */
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  transition: background-color 0.3s;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2px; /* Sharper corners like the photo */
+  font-family: 'Inter', sans-serif; /* Cleaner font for that look */
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase; /* Match the professional style */
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: #34495e;
+  color: #ffffff; /* Glow to white on hover */
 }
 
-.nav-link.router-link-exact-active {
-  background-color: #155930;
+/* This is the key: The white box with black text from the photo */
+.nav-link.router-link-active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-radius: 0; /* Sharp square edges */
 }
 </style>
