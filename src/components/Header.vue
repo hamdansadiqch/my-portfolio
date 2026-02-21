@@ -3,7 +3,7 @@
     <div class="container">
       <nav class="nav">
         <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/experience" class="nav-link">My Experience</router-link>
+        <router-link to="/experience" class="nav-link">Resume</router-link>
         <router-link to="/project" class="nav-link">Project</router-link>
         <router-link to="/socials" class="nav-link">Socials</router-link>
         <router-link to="/contact" class="nav-link">Contact</router-link>
