@@ -55,6 +55,7 @@ export default {
 
 <style scoped>
 .socials-page {
+  font-family: 'Inter', sans-serif;
   padding: 2rem;
   min-height: 100vh;
   text-align: center;
@@ -65,6 +66,7 @@ export default {
 }
 
 .page-title {
+  font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   /* High contrast white text */
@@ -109,6 +111,7 @@ export default {
 }
 
 .social-card h3 {
+  font-family: 'Inter', sans-serif;
   margin-bottom: 0.5rem;
   color: #ffffff;
   text-transform: uppercase;
@@ -116,6 +119,7 @@ export default {
 }
 
 .social-card p {
+  font-family: 'Inter', sans-serif;
   /* Muted grey to match the footer details */
   color: #888888; 
   margin: 0;

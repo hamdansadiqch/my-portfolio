@@ -1,7 +1,7 @@
 <template>
   <main class="home">
     <section class="hero">
-      <h1>Welcome To My App</h1>
+      <h1>Welcome To My Portfolio</h1>
       <p class="subtitle"><i>Welcome to my page, my name is Hamdan Sadiq. I am currently pursuing an undergraduate Computer Science degree at Trinity Western University in Canada. Originally from Lahore, Pakistan I have lived most of my life in Dubai, UAE. I am passionate in whatever journey I embark on currently my journey is an exciting Computer Science degree in which I have developed a lot of interest in front end programming. My life quote is by my favorite Formula 1 driver Max Verstappen: "I believe I am the best because every driver needs to think like that or it's better to stay at home!"</i></p>
     </section>
 
