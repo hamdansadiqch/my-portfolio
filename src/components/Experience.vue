@@ -1,7 +1,7 @@
 <template>
   <div class="pdf-container">
     <iframe
-      :src="`${import.meta.env.BASE_URL}resume.pdf`"
+      :src="pdfUrl"
       class="pdf-frame"
       title="My Resume"
     ></iframe>
@@ -11,6 +11,11 @@
 <script>
 export default {
   name: 'Experience',
+  data() {
+    return {
+      pdfUrl: `${import.meta.env.BASE_URL}resume.pdf`,
+    };
+  },
 };
 </script>
 
