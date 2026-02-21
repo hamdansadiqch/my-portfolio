@@ -58,13 +58,19 @@ export default {
   padding: 2rem;
   min-height: 100vh;
   text-align: center;
-  background-color: white;
+  /* Match the site theme */
+  background-color: #000000; 
+  padding-top: 100px; /* Space for the fixed header */
+  padding-bottom: 100px; /* Space for the fixed footer */
 }
 
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: black;
+  /* High contrast white text */
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .socials-container {
@@ -78,32 +84,40 @@ export default {
 }
 
 .social-card {
-  background: white;
+  /* Match the header/footer black */
+  background: #000000; 
   border-radius: 10px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 4px 6px #18334f;
+  /* Replace blue shadow with a clean white border like the photo theme */
+  border: 1px solid #ffffff; 
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .social-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* Subtle white glow on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  background-color: #111111;
 }
 
 .card-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #555;
+  /* Icon becomes bright white */
+  color: #ffffff;
 }
 
 .social-card h3 {
   margin-bottom: 0.5rem;
-  color: #222;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .social-card p {
-  color: #666;
+  /* Muted grey to match the footer details */
+  color: #888888; 
   margin: 0;
 }
 
@@ -111,11 +125,14 @@ export default {
 .fab {
   font-family: "Font Awesome 5 Brands";
 }
+
 .socials-image {
   width: 100%;
-  height: 200px; /* Fixed height for consistency */
-  object-fit: contain; /* Ensures image covers the space nicely */
+  height: 200px; 
+  object-fit: contain; 
   border-radius: 4px;
   margin-bottom: 1rem;
+  /* Keep image crisp on black background */
+  filter: brightness(0.9);
 }
 </style>
