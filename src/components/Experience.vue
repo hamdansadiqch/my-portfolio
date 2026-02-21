@@ -13,7 +13,7 @@ export default {
   name: 'Experience',
   data() {
     return {
-      pdfUrl: `${import.meta.env.BASE_URL}resume.pdf`,
+      pdfUrl: `${import.meta.env.BASE_URL}Resume.pdf`,
     };
   },
 };
