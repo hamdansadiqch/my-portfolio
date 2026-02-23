@@ -2,7 +2,21 @@
   <footer class="footer">
     <div class="footer-content">
       <span>© 2025 Hamdan Sadiq. All Rights Reserved.</span>
-      
+
+      <div class="footer-socials">
+        <a href="https://github.com/hamdansadiqch" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hamdan-sadiq-7105b222b/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/hamdan.sadiq.2025/" target="_blank" class="social-link">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/hamdansadiqch/" target="_blank" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
   </footer>
 </template>
@@ -18,16 +32,16 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem; /* Matches header padding height */
-  background-color: #000000; /* Pure Black */
-  color: #ffffff; /* Clean White */
+  padding: 1.5rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: 'Inter', sans-serif; /* Cleaner, modern font matching the photo style */
+  font-family: 'Inter', sans-serif;
   z-index: 999;
-  border-top: 1px solid #222; /* Subtle separation from the body */
+  border-top: 1px solid #222;
 }
 
 .footer-content {
@@ -35,21 +49,32 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase; /* Matches the header's professional feel */
+  text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.8rem;
 }
 
-.map-box {
+/* Social Links Container */
+.footer-socials {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
+  gap: 1.5rem; /* Space between the icons */
+  align-items: center;
 }
 
-.map-box small {
-  color: #888888; /* Muted grey to match the inactive nav links */
-  font-size: 11px;
-  font-weight: 600;
+.social-link {
+  color: #ffffff;
+  font-size: 1.2rem; /* Size of the icons */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #888888; /* Muted grey on hover to match your design theme */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Font Awesome brands font declaration */
+.fab {
+  font-family: "Font Awesome 5 Brands";
 }
 </style>
