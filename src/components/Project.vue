@@ -6,15 +6,15 @@
       <div class="project-card">
         <div class="card-header">
           <span class="icon">🤖</span>
-          <h3>Hamster Robot: Autonomous Maze Solver</h3>
+          <h3>Food Flow Delivery Management System</h3>
         </div>
         <p class="description">
-          A robotics project focused on programming a Hamster robot to navigate and map complex grids autonomously using specialized logic.
+          A food delivery management system developed for FoodBank, utilizing Java and MySQL to optimize delivery data and enhance operational efficiency.
         </p>
         <div class="tech-stack">
-          <span class="tag">Robotics</span>
-          <span class="tag">Programming</span>
-          <span class="tag">Logic</span>
+          <span class="tag">Java</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Database Design</span>
         </div>
         <a href="https://github.com/hamdansadiqch" target="_blank" class="source-button">
           <i class="fab fa-github"></i> Source
@@ -24,15 +24,15 @@
       <div class="project-card">
         <div class="card-header">
           <span class="icon">🌐</span>
-          <h3>Personal Portfolio</h3>
+          <h3>Interactive 3D Sphere</h3>
         </div>
         <p class="description">
-          A modern, responsive portfolio website built using Vue.js and Vite, deployed via GitHub Pages with a minimalist dark aesthetic.
+          A WebGL-based interactive 3D sphere project created for CMPT 370, showcasing real-time rendering and user interaction capabilities.
         </p>
         <div class="tech-stack">
-          <span class="tag">Vue.js</span>
-          <span class="tag">Vite</span>
-          <span class="tag">GitHub Pages</span>
+          <span class="tag">WebGL</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
         </div>
         <a href="https://github.com/hamdansadiqch/my-portfolio" target="_blank" class="source-button">
           <i class="fab fa-github"></i> Source
@@ -42,15 +42,15 @@
       <div class="project-card">
         <div class="card-header">
           <span class="icon">📄</span>
-          <h3>LinkedIn Profile Audit</h3>
+          <h3>Rotating Star Interactive Animation</h3>
         </div>
         <p class="description">
-          A professional audit report created for CMPT 102, analyzing profile optimization and professional branding.
+          A WebGL-based rotating star animation developed for CMPT 370, demonstrating advanced graphics programming and interactive design techniques.
         </p>
         <div class="tech-stack">
-          <span class="tag">CMPT 102</span>
-          <span class="tag">Analysis</span>
-          <span class="tag">Branding</span>
+          <span class="tag">CMPT 370</span>
+          <span class="tag">WebGL</span>
+          <span class="tag">Graphics Programming</span>
         </div>
         <a href="#" target="_blank" class="source-button">
           <i class="fab fa-github"></i> Source
