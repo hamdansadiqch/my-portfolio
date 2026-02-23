@@ -1,19 +1,19 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <span>© 2025 Hamdan Sadiq. All Rights Reserved.</span>
+      <span class="copyright">© 2025 Hamdan Sadiq. All Rights Reserved.</span>
 
       <div class="footer-socials">
-        <a href="https://github.com/hamdansadiqch" target="_blank" class="social-link">
+        <a href="https://github.com/hamdansadiqch" target="_blank" class="footer-link" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/hamdan-sadiq-7105b222b/" target="_blank" class="social-link">
-          <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/hamdan-sadiq-7105b222b/" target="_blank" class="footer-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://www.facebook.com/hamdan.sadiq.2025/" target="_blank" class="social-link">
-          <i class="fab fa-facebook"></i>
+        <a href="https://www.facebook.com/hamdan.sadiq.2025/" target="_blank" class="footer-link" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.instagram.com/hamdansadiqch/" target="_blank" class="social-link">
+        <a href="https://www.instagram.com/hamdansadiqch/" target="_blank" class="footer-link" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
@@ -30,9 +30,9 @@ export default {
 <style scoped>
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem; 
   background-color: #000000;
   color: #ffffff;
   position: fixed;
@@ -46,35 +46,48 @@ export default {
 
 .footer-content {
   width: 100%;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-size: 0.75rem; /* Slightly smaller for better fit */
 }
 
-/* Social Links Container */
 .footer-socials {
   display: flex;
-  gap: 1.5rem; /* Space between the icons */
+  gap: 1.2rem; /* Compact spacing */
   align-items: center;
 }
 
-.social-link {
+.footer-link {
   color: #ffffff;
-  font-size: 1.2rem; /* Size of the icons */
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 1rem; /* Smaller icons to fit footer height */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
-.social-link:hover {
-  color: #888888; /* Muted grey on hover to match your design theme */
-  transform: translateY(-3px); /* Subtle lift effect */
+.footer-link:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
 }
 
-/* Font Awesome brands font declaration */
+/* Force Font Awesome styles if they aren't loading */
 .fab {
-  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
 </style>
