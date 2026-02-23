@@ -23,7 +23,27 @@
           </div>
         </div>
       </div>
-    </main>
+
+      <div class="references-container">
+        <h2 class="references-title">References</h2>
+        <div class="references-list">
+          <p class="reference-item">
+            Chaudhry, H. S. (2025).  Spartan spotlight: Eli Hrychiw, The 300: Fuelling Spartan Spirit Beyond The Court. Mars’ Hill Magazine, 30(1) 23-24.
+            https://issuu.com/marshillonline/docs/_volume_30_-_issue_01_homeland
+            Chaudhry, H. S. (2025).  Spartan spotlight: Joy Mofolasayo. Mars’ Hill Magazine, 30(2) 25.
+            https://issuu.com/marshillonline/docs/_volume_30_-_issue_02_dystopia
+            Chaudhry, H. S. (2025).  Inside TWU ICP's Culture Week, Spartan spotlight: Justin Kiplagat. Mars’ Hill Magazine, 30(3) 12-13, 23.
+            https://issuu.com/marshillonline/docs/_volume_30_-_issue_03_memento
+            Chaudhry, H. S. (2025).  Spartan spotlight: David Saavedra. Mars’ Hill Magazine, 30(4) 17.
+            https://issuu.com/marshillonline/docs/_volume_30_-_issue_04_jubilee
+            Chaudhry, H. S. (2026).  Christmas with Cal Townsend, Spartan spotlight: Tate Calles. Mars’ Hill Magazine, 30(5) 13-14, 26.
+            https://issuu.com/marshillonline/docs/_volume_30_-_issue_05_supernova_d87e8c0a6fb456
+            Chaudhry, H. S. (2026).  Spartan spotlight: Carter Van der Waarde. Mars’ Hill Magazine, 30(6) 21.
+            https://issuu.com/marshillonline/docs/_volume_30_-_issue_06_redamancy_
+          </p>
+        </div>
+      </div>
+      </main>
 
     <Footer />
   </div>
@@ -34,6 +54,7 @@ import { ref } from 'vue';
 
 const imageSources = ref([
   'Iss.01.png',
+  'Iss.01(1).png',
   'Iss.02(1).png',
   'Iss.02(2).png',
   'Iss.03(1).png',
@@ -147,12 +168,37 @@ const cycleImage = () => {
   width: 24px; /* Slight expansion for active state */
 }
 
+/* NEW STYLES FOR REFERENCES */
+.references-container {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.references-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.reference-item {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .gallery-title {
     font-size: 2.2rem;
   }
   .slideshow-container {
+    max-width: 90%;
+  }
+  .references-container {
     max-width: 90%;
   }
 }
