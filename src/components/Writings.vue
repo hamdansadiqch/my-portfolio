@@ -43,7 +43,7 @@ const imageSources = ref([
   'Iss.05(1).png',
   'Iss.05(2).png',
   'Iss.05(3).png',
-  'Iss.06.png',
+  'Iss.06(1).png',
 ]);
 
 const currentIndex = ref(0);
