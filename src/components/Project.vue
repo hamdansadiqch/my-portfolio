@@ -1,215 +1,179 @@
 <template>
-  <div class="project-wrapper">
-    <div class="canvas-container">
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-      <h1>Loading Interactive Sphere</h1>
-      <div id="loading-bar-container">
-        <div id="loading-bar"></div>
-        <div id="loading-ball"></div>
-      </div>
-      <button id="start-loading-btn">Press To Start</button>
-    </div>
-    <!-- Main Content -->
-    <div id="info">Drag to rotate · Scroll to zoom · Click to grab sphere</div>
-    <div id="controls-container">
-      <div class="control-group">
-        <label for="speed-slider">Animation Speed</label>
-        <input type="range" id="speed-slider" min="0.1" max="3" step="0.1" value="1" />
-      </div>
-      <div class="control-group">
-        <button id="start-btn" class="control-btn">Start</button>
-        <button id="stop-btn" class="control-btn">Stop</button>
-      </div>
-      <div class="control-group">
-        <button id="upload-texture-btn" class="control-btn">Upload Texture</button>
-        <input type="file" id="texture-upload" accept="image/*" style="display: none" />
-      </div>
-    </div>
-    <canvas id="glCanvas"></canvas>
-    </div>
-  </div>
+  <main class="projects-page">
+    <h1 class="page-title">Projects</h1>
 
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="card-header">
+          <span class="icon">🤖</span>
+          <h3>Hamster Robot: Autonomous Maze Solver</h3>
+        </div>
+        <p class="description">
+          A robotics project focused on programming a Hamster robot to navigate and map complex grids autonomously using specialized logic.
+        </p>
+        <div class="tech-stack">
+          <span class="tag">Robotics</span>
+          <span class="tag">Programming</span>
+          <span class="tag">Logic</span>
+        </div>
+        <a href="https://github.com/hamdansadiqch" target="_blank" class="source-button">
+          <i class="fab fa-github"></i> Source
+        </a>
+      </div>
 
+      <div class="project-card">
+        <div class="card-header">
+          <span class="icon">🌐</span>
+          <h3>Personal Portfolio</h3>
+        </div>
+        <p class="description">
+          A modern, responsive portfolio website built using Vue.js and Vite, deployed via GitHub Pages with a minimalist dark aesthetic.
+        </p>
+        <div class="tech-stack">
+          <span class="tag">Vue.js</span>
+          <span class="tag">Vite</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+        <a href="https://github.com/hamdansadiqch/my-portfolio" target="_blank" class="source-button">
+          <i class="fab fa-github"></i> Source
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="card-header">
+          <span class="icon">📄</span>
+          <h3>LinkedIn Profile Audit</h3>
+        </div>
+        <p class="description">
+          A professional audit report created for CMPT 102, analyzing profile optimization and professional branding.
+        </p>
+        <div class="tech-stack">
+          <span class="tag">CMPT 102</span>
+          <span class="tag">Analysis</span>
+          <span class="tag">Branding</span>
+        </div>
+        <a href="#" target="_blank" class="source-button">
+          <i class="fab fa-github"></i> Source
+        </a>
+      </div>
+    </div>
+  </main>
 </template>
 
-<script>
-export default {
-  name: 'BouncingSphere',
-  mounted() {
-    // Load external scripts after mount
-    const mvScript = document.createElement('script');
-    mvScript.src = './Common/MVnew.js';
-    mvScript.async = true;
-    document.body.appendChild(mvScript);
-
-    const mainScript = document.createElement('script');
-    mainScript.src = './script.js';
-    mainScript.async = true;
-    document.body.appendChild(mainScript);
-  }
-};
-</script>
-
 <style scoped>
-.project-wrapper {
-  min-height: calc(100vh - 160px); /* Full height minus header + footer */
+.projects-page {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 2rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card Base */
+.project-card {
+  background: #0a0a0a; /* Slightly lighter than pure black for depth */
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* ✅ Vertical center */
-  align-items: center;     /* ✅ Horizontal center */
-  padding: 2rem;
-  box-sizing: border-box;
-}
-.canvas-container {
-  max-width: 960px;
-  width: 100%;
-  background: black;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
-  padding: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
+/* NEON HOVER EFFECT */
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #00f2ff; /* Neon Cyan Outline */
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.4); /* Neon Glow */
+}
 
-body {
-  margin: 0;
-  overflow: hidden;
-  background: #000;
-}
-canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-  cursor: grab;
-}
-#info {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: white;
-  font-family: Arial;
-  pointer-events: none;
-  text-shadow: 1px 1px 2px black;
-}
-#glCanvas {
-  width: 100%;
-  max-height: 500px;
-  display: block;
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 1rem;
 }
 
-#controls-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  width: 100%;
-}
-.control-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-.control-group label {
-  color: white;
-  font-family: Arial;
-  font-size: 14px;
-}
-#speed-slider {
-  width: 150px;
-}
-.control-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  min-width: 80px;
-}
-.control-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-#start-btn {
-  background: rgba(0, 200, 0, 0.5);
-}
-#stop-btn {
-  background: rgba(200, 0, 0, 0.5);
+.icon {
+  font-size: 1.5rem;
 }
 
-/* Loading Screen Styles */
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
+.project-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.description {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Tech Tags */
+.tech-stack {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  border: 1px solid #333;
+}
+
+/* Source Button */
+.source-button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
-  z-index: 9999;
-  color: white;
-  font-family: Arial;
+  gap: 8px;
+  width: fit-content;
+  transition: all 0.3s ease;
 }
-#loading-bar-container {
-  position: relative;
-  width: 300px;
-  height: 20px;
-  background: #333;
-  border-radius: 10px;
-  margin: 20px 0;
-  overflow: hidden;
+
+.source-button:hover {
+  background: #fff;
+  color: #000;
 }
-#loading-bar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(to right, #ff0000, #8BC34A);
-  transition: width 0.3s;
-}
-#loading-ball {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(0, 255, 81);
-  border-radius: 50%;
-  animation: bounceBall 2s infinite linear;
-}
-@keyframes bounceBall {
-  0%   { transform: translateX(0px) translateY(0px); }
-  10%  { transform: translateX(30px) translateY(-15px); }
-  20%  { transform: translateX(60px) translateY(0px); }
-  30%  { transform: translateX(90px) translateY(-15px); }
-  40%  { transform: translateX(120px) translateY(0px); }
-  50%  { transform: translateX(150px) translateY(-15px); }
-  60%  { transform: translateX(180px) translateY(0px); }
-  70%  { transform: translateX(210px) translateY(-15px); }
-  80%  { transform: translateX(240px) translateY(0px); }
-  90%  { transform: translateX(270px) translateY(-15px); }
-  100% { transform: translateX(300px) translateY(0px); }
-}
-#start-loading-btn {
-  display: none;
-  padding: 12px 30px;
-  font-size: 18px;
-  background: #2d0692;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-#start-loading-btn:hover {
-  background: #2600ff;
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
 }
 </style>

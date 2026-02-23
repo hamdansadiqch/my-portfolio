@@ -5,7 +5,7 @@
         <router-link to="/" class="nav-link">Home</router-link>
         <router-link to="/about" class="nav-link">About</router-link>
         <router-link to="/experience" class="nav-link">Resume</router-link>
-        <router-link to="/project" class="nav-link">Project</router-link>
+        <router-link to="/project" class="nav-link">Projects</router-link>
         <router-link to="/writings" class="nav-link">Writings</router-link>
         <router-link to="/contact" class="nav-link">Contact</router-link>
       </nav>
