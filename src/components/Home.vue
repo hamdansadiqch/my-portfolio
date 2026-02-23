@@ -37,9 +37,10 @@ export default {
     return {
       currentIndex: 0,
       images: [
-        { src: '/image3.jpg', alt: 'Current Profile' },
-        { src: '/image2.jpg', alt: 'Teenage Profile' },
-        { src: '/image.jpg', alt: 'Childhood Profile' }
+        // Remove the leading "/" so the browser looks inside the current folder
+        { src: 'image3.jpg', alt: 'Current Profile' },
+        { src: 'image2.jpg', alt: 'Teenage Profile' },
+        { src: 'image.jpg', alt: 'Childhood Profile' }
       ]
     }
   },
