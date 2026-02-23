@@ -3,7 +3,7 @@
     <Header />
 
     <main class="gallery-section">
-      <h1 class="gallery-title">My Projects</h1>
+      <h1 class="gallery-title">My Articles</h1>
 
       <div class="slideshow-container" @click="cycleImage">
         <img 
