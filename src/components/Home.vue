@@ -8,14 +8,14 @@
           Computer Science student at Trinity Western University. 
           Passionate about front-end development and robotics.
         </p>
-        <a href="https://github.com/hamdansadiqc" target="_blank" class="github-btn">
+        <a href="https://github.com/hamdansadiqch" target="_blank" class="github-btn">
           View My GitHub
         </a>
       </div>
 
       <div class="slideshow-container" @click="nextImage">
         <div class="image-wrapper">
-          <img :src="images[currentIndex].url" :alt="images[currentIndex].alt" class="hero-image" />
+          <img :src="images[currentIndex].src" :alt="images[currentIndex].alt" class="hero-image" />
           
           <div class="slideshow-overlay">
             <span class="click-hint">Click to cycle</span>
@@ -37,9 +37,9 @@ export default {
     return {
       currentIndex: 0,
       images: [
-        { url: '/image3.jpg', alt: 'Current Profile' },
-        { url: '/image2.jpg', alt: 'Teenage Profile' },
-        { url: '/image.jpg', alt: 'Childhood Profile' }
+        { src: '/image3.jpg', alt: 'Current Profile' },
+        { src: '/image2.jpg', alt: 'Teenage Profile' },
+        { src: '/image.jpg', alt: 'Childhood Profile' }
       ]
     }
   },
@@ -56,7 +56,7 @@ export default {
 
 .home {
   min-height: 85vh;
-  background-color: #000; /* Deep black to match header/footer */
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +73,6 @@ export default {
   gap: 5rem;
 }
 
-/* Left Side Styling */
 .hero-text {
   flex: 1;
 }
@@ -88,7 +87,7 @@ export default {
 .hero-text p {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: #a0a0a0; /* Subtle grey text */
+  color: #a0a0a0;
   margin-bottom: 2.5rem;
   max-width: 450px;
 }
@@ -109,7 +108,6 @@ export default {
   transform: translateY(-3px);
 }
 
-/* Right Side: Slideshow Styling */
 .slideshow-container {
   flex: 1;
   cursor: pointer;
@@ -125,7 +123,7 @@ export default {
 
 .hero-image {
   width: 100%;
-  aspect-ratio: 3/4; /* Maintains a portrait look */
+  aspect-ratio: 3/4; 
   object-fit: cover;
   border-radius: 16px;
   border: 1px solid #333;
@@ -172,7 +170,6 @@ export default {
   border-radius: 4px;
 }
 
-/* Responsive Fix */
 @media (max-width: 850px) {
   .hero-container {
     flex-direction: column-reverse;
