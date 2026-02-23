@@ -28,18 +28,18 @@
         <h2 class="references-title">References</h2>
         <div class="references-list">
           <p class="reference-item">
-            Chaudhry, H. S. (2025).  Spartan spotlight: Eli Hrychiw, The 300: Fuelling Spartan Spirit Beyond The Court. Mars’ Hill Magazine, 30(1) 23-24.
-            https://issuu.com/marshillonline/docs/_volume_30_-_issue_01_homeland
-            Chaudhry, H. S. (2025).  Spartan spotlight: Joy Mofolasayo. Mars’ Hill Magazine, 30(2) 25.
-            https://issuu.com/marshillonline/docs/_volume_30_-_issue_02_dystopia
-            Chaudhry, H. S. (2025).  Inside TWU ICP's Culture Week, Spartan spotlight: Justin Kiplagat. Mars’ Hill Magazine, 30(3) 12-13, 23.
-            https://issuu.com/marshillonline/docs/_volume_30_-_issue_03_memento
-            Chaudhry, H. S. (2025).  Spartan spotlight: David Saavedra. Mars’ Hill Magazine, 30(4) 17.
-            https://issuu.com/marshillonline/docs/_volume_30_-_issue_04_jubilee
-            Chaudhry, H. S. (2026).  Christmas with Cal Townsend, Spartan spotlight: Tate Calles. Mars’ Hill Magazine, 30(5) 13-14, 26.
-            https://issuu.com/marshillonline/docs/_volume_30_-_issue_05_supernova_d87e8c0a6fb456
-            Chaudhry, H. S. (2026).  Spartan spotlight: Carter Van der Waarde. Mars’ Hill Magazine, 30(6) 21.
-            https://issuu.com/marshillonline/docs/_volume_30_-_issue_06_redamancy_
+            Chaudhry, H. S. (2025).  Spartan spotlight: Eli Hrychiw, The 300: Fuelling Spartan Spirit Beyond The Court. Mars’ Hill Magazine, 30(1) 23-24.<br>
+            <a href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_01_homeland" target="_blank">https://issuu.com/marshillonline/docs/_volume_30_-_issue_01_homeland</a><br>
+            Chaudhry, H. S. (2025).  Spartan spotlight: Joy Mofolasayo. Mars’ Hill Magazine, 30(2) 25.<br>
+            <a href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_02_dystopia" target="_blank">https://issuu.com/marshillonline/docs/_volume_30_-_issue_02_dystopia</a><br>
+            Chaudhry, H. S. (2025).  Inside TWU ICP's Culture Week, Spartan spotlight: Justin Kiplagat. Mars’ Hill Magazine, 30(3) 12-13, 23.<br>
+            <a href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_03_memento" target="_blank">https://issuu.com/marshillonline/docs/_volume_30_-_issue_03_memento</a><br>
+            Chaudhry, H. S. (2025).  Spartan spotlight: David Saavedra. Mars’ Hill Magazine, 30(4) 17.<br>
+            <a href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_04_jubilee" target="_blank">https://issuu.com/marshillonline/docs/_volume_30_-_issue_04_jubilee</a><br>
+            Chaudhry, H. S. (2026).  Christmas with Cal Townsend, Spartan spotlight: Tate Calles. Mars’ Hill Magazine, 30(5) 13-14, 26.<br>
+            <a href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_05_supernova_d87e8c0a6fb456" target="_blank">https://issuu.com/marshillonline/docs/_volume_30_-_issue_05_supernova_d87e8c0a6fb456</a><br>
+            Chaudhry, H. S. (2026).  Spartan spotlight: Carter Van der Waarde. Mars’ Hill Magazine, 30(6) 21.<br>
+            <a href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_06_redamancy" target="_blank">https://issuu.com/marshillonline/docs/_volume_30_-_issue_06_redamancy</a>
           </p>
         </div>
       </div>
