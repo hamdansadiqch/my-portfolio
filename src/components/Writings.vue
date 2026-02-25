@@ -5,15 +5,34 @@
     <main class="gallery-section">
       <h1 class="gallery-title">My Articles</h1>
 
-      <div class="slideshow-container" @click="cycleImage">
+      <div class="slideshow-container" ref="slideshowRef" @click="nextImage">
+        
+        <button class="controls-btn fullscreen-btn" @click.stop="toggleFullscreen" title="Toggle Fullscreen">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          </svg>
+        </button>
+
+        <button class="controls-btn prev-btn" @click.stop="prevImage" title="Previous Image">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
         <img 
           :src="imageSources[currentIndex]" 
           alt="Gallery Slide" 
           class="display-image"
         />
+
+        <button class="controls-btn next-btn" @click.stop="nextImage" title="Next Image">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
         
         <div class="tile-overlay">
-          <p class="instruction">CLICK TO CYCLE</p>
+          <p class="instruction">CLICK IMAGE OR ARROWS TO CYCLE</p>
           <div class="progress-bar-container">
             <div 
               v-for="(dot, index) in imageSources" 
@@ -68,9 +87,27 @@ const imageSources = ref([
 ]);
 
 const currentIndex = ref(0);
+const slideshowRef = ref(null);
 
-const cycleImage = () => {
+const nextImage = () => {
   currentIndex.value = (currentIndex.value + 1) % imageSources.value.length;
+};
+
+const prevImage = () => {
+  // Adding array length ensures we don't get a negative index in JavaScript
+  currentIndex.value = (currentIndex.value - 1 + imageSources.value.length) % imageSources.value.length;
+};
+
+const toggleFullscreen = () => {
+  if (!document.fullscreenElement) {
+    if (slideshowRef.value?.requestFullscreen) {
+      slideshowRef.value.requestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 };
 </script>
 
@@ -82,7 +119,6 @@ const cycleImage = () => {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Use the font-family from your main site here */
   font-family: 'Inter', sans-serif; 
 }
 
@@ -108,16 +144,18 @@ const cycleImage = () => {
 .slideshow-container {
   position: relative;
   width: 100%;
-  max-width: 500px; /* Adjust to match your original tile size */
+  max-width: 500px; 
   aspect-ratio: 4 / 5;
   border-radius: 24px;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #111; /* fallback background */
 }
 
-.slideshow-container:hover {
+/* Only scale on hover if NOT in fullscreen */
+.slideshow-container:not(:fullscreen):hover {
   transform: scale(1.03);
 }
 
@@ -127,6 +165,54 @@ const cycleImage = () => {
   object-fit: cover;
 }
 
+/* Button Overlays (Arrows & Fullscreen) */
+.controls-btn {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.controls-btn:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: scale(1.1);
+}
+
+.prev-btn {
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.prev-btn:hover {
+  transform: translateY(-50%) scale(1.1); /* Preserve Y-translation */
+}
+
+.next-btn {
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.next-btn:hover {
+  transform: translateY(-50%) scale(1.1); /* Preserve Y-translation */
+}
+
+.fullscreen-btn {
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+}
+
 /* Bottom Overlay Elements */
 .tile-overlay {
   position: absolute;
@@ -134,11 +220,11 @@ const cycleImage = () => {
   left: 0;
   right: 0;
   padding: 30px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: none;
+  pointer-events: none; /* Allows clicking through to the image */
 }
 
 .instruction {
@@ -149,10 +235,12 @@ const cycleImage = () => {
   opacity: 0.9;
 }
 
-/* Progress Dots (The White Pill Bars) */
+/* Progress Dots */
 .progress-bar-container {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap; /* Helps if there are many dots on small screens */
+  justify-content: center;
 }
 
 .progress-dot {
@@ -165,14 +253,29 @@ const cycleImage = () => {
 
 .progress-dot.active {
   background-color: #fff;
-  width: 24px; /* Slight expansion for active state */
+  width: 24px; 
 }
 
-/* NEW STYLES FOR REFERENCES */
+/* --- FULLSCREEN STYLES --- */
+.slideshow-container:fullscreen {
+  max-width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  aspect-ratio: auto; /* Remove aspect ratio constraint */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-container:fullscreen .display-image {
+  object-fit: contain; /* Prevents cropping when in fullscreen */
+}
+
+/* References */
 .references-container {
   margin-top: 3rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   text-align: center;
   padding-bottom: 2rem;
 }
@@ -188,6 +291,18 @@ const cycleImage = () => {
   font-size: 0.9rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.7);
+  word-break: break-word; /* Prevents long URLs from breaking layout */
+}
+
+.reference-item a {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.reference-item a:hover {
+  opacity: 1;
 }
 
 /* Mobile Responsiveness */
@@ -200,6 +315,10 @@ const cycleImage = () => {
   }
   .references-container {
     max-width: 90%;
+  }
+  .controls-btn {
+    width: 36px;
+    height: 36px;
   }
 }
 </style>
