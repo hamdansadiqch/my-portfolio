@@ -62,7 +62,6 @@
 
 <style scoped>
 .projects-page {
-  background-color: #000;
   color: #fff;
   min-height: 100vh;
   padding: 100px 2rem;

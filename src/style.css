@@ -26,7 +26,14 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000000; /* Forces the background to be black */
+  
+  /* The New Starry Background */
+  background-color: #000000; /* Fallback color */
+  background-image: url('/image1.avif'); /* Looks in the public folder */
+  background-size: cover; /* Stretches the image to fit the screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Pro-tip: This keeps the stars still while you scroll through your content! */
 }
 
 h1 {

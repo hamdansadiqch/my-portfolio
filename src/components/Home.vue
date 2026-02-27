@@ -57,7 +57,6 @@ export default {
 
 .home {
   min-height: 85vh;
-  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -114,7 +114,6 @@ const toggleFullscreen = () => {
 <style scoped>
 /* Main Page Container */
 .page-wrapper {
-  background-color: #000;
   color: #fff;
   min-height: 100vh;
   display: flex;

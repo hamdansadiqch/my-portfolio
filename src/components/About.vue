@@ -33,7 +33,6 @@ export default {
 
 .about-page {
   min-height: 100vh;
-  background-color: #000; /* Matching your black theme */
   color: white;
   font-family: 'Inter', sans-serif;
   display: flex;
