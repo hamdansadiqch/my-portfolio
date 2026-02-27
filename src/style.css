@@ -27,13 +27,15 @@ body {
   min-width: 320px;
   min-height: 100vh;
   
-  /* The New Starry Background */
-  background-color: #000000; /* Fallback color */
-  background-image: url('/image1.jpg'); /* Looks in the public folder */
-  background-size: cover; /* Stretches the image to fit the screen */
+  /* Fallback color so it stays black even before the image loads */
+  background-color: #000000; 
+  
+  /* Points to the assets folder so Vite can process it for GitHub Pages */
+  background-image: url('./assets/image1.jpg'); 
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Pro-tip: This keeps the stars still while you scroll through your content! */
+  background-attachment: fixed;
 }
 
 h1 {
@@ -75,10 +77,5 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  /* ... and anything else inside this block */
 }
