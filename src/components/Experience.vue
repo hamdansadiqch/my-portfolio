@@ -27,7 +27,6 @@ export default {
 .pdf-container {
   /* Changed from 100vh to ensure it fits perfectly between your header and footer */
   height: calc(100vh - 120px); 
-  background: #ffffff;
   display: flex;
   flex-direction: column; /* Stacks the button and iframe vertically */
   justify-content: center;
