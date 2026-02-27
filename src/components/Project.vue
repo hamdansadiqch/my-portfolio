@@ -12,11 +12,10 @@
           A food delivery management system developed for FoodBank, utilizing Java and MySQL to optimize delivery data and enhance operational efficiency.
         </p>
         <div class="tech-stack">
-          <span class="tag">Java</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Database Design</span>
+          <span class="tag">Android Studio</span>
+          <span class="tag">Firebase</span>
         </div>
-        <a href="https://github.com/hamdansadiqch" target="_blank" class="source-button">
+        <a href="https://github.com/hamdansadiqch/FoodFlow-Donation-Management-App" target="_blank" class="source-button">
           <i class="fab fa-github"></i> Source
         </a>
       </div>
@@ -34,7 +33,7 @@
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
         </div>
-        <a href="https://github.com/hamdansadiqch/my-portfolio" target="_blank" class="source-button">
+        <a href="https://github.com/hamdansadiqch/Interactive-3D-Sphere" target="_blank" class="source-button">
           <i class="fab fa-github"></i> Source
         </a>
       </div>
@@ -52,7 +51,7 @@
           <span class="tag">WebGL</span>
           <span class="tag">Graphics Programming</span>
         </div>
-        <a href="#" target="_blank" class="source-button">
+        <a href="https://github.com/hamdansadiqch/Interactive-Rotating-Star-Animation" target="_blank" class="source-button">
           <i class="fab fa-github"></i> Source
         </a>
       </div>
