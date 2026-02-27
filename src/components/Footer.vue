@@ -33,7 +33,12 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem; 
-  background: #000000;
+  
+  /* Matches the header's transparent deep space blue */
+  background-color: rgba(5, 8, 14, 0.85); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
   color: #ffffff;
   position: fixed;
   bottom: 0;
@@ -41,7 +46,9 @@ export default {
   right: 0;
   font-family: 'Inter', sans-serif;
   z-index: 999;
-  border-top: 1px solid #222;
+  
+  /* Replaces the harsh #222 border with a faint, elegant one */
+  border-top: 1px solid rgba(255, 255, 255, 0.05); 
 }
 
 .footer-content {

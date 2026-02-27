@@ -21,17 +21,25 @@ export default {
 
 <style scoped>
 .header {
-  background-color: #000000; /* Pure Black as seen in the photo */
+  /* Uses the deep space color but at 85% opacity so stars peek through */
+  background-color: rgba(5, 8, 14, 0.85); 
+  
+  /* Adds a subtle blur to the stars behind the header (Glassmorphism effect) */
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
+  
   color: #ffffff;
-  padding: 1.5rem 0; /* Slightly taller for that premium feel */
+  padding: 1.5rem 0; 
   position: fixed; 
   top: 0; 
   left: 0; 
   right: 0; 
   width: 100%; 
   z-index: 1000; 
+  
+  /* Optional: Adds a very faint border to separate it cleanly from the background */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
