@@ -10,17 +10,31 @@ import Footer from './components/Footer.vue'
 </template>
 
 <style>
-body {
+/* Forces the background on the absolute highest level of the website */
+body, html {
   margin: 0;
-  font-family: Arial, sans-serif;
-  padding-top: 60px; /* For desktop header */
-  padding-bottom: 60px; /* For desktop footer */
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000000 !important; 
+}
+
+#app {
+  font-family: 'Inter', Arial, sans-serif;
+  min-height: 100vh;
+  padding-top: 60px; 
+  padding-bottom: 60px; 
+  color: #ffffff; 
+  
+  /* UPDATED TO .JPG HERE */
+  background-image: url('./assets/image1.jpg') !important; 
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important; 
 }
 
 /* Adjust padding for mobile devices */
 @media (max-width: 768px) {
-  body {
-    /* Increases padding slightly on phones in case the header/footer stack and get taller */
+  #app {
     padding-top: 80px; 
     padding-bottom: 80px;
   }
