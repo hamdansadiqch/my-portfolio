@@ -36,21 +36,27 @@ export default {
 }
 
 .mobile-fallback-btn {
-  display: none; /* Hidden by default on desktop */
-  background-color: #18334f;
-  color: yellow;
+  display: none; /* Still hidden by default on desktop */
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff; /* Crisp white border */
   padding: 0.8rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 8px; /* Matches your project buttons */
   text-decoration: none;
-  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 1rem;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .mobile-fallback-btn:hover {
-  background-color: #0c1928;
+  transform: translateY(-3px); /* Slight lift on hover */
+  border-color: #00f2ff; /* Neon Cyan Outline */
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.4); /* Neon Glow */
+  color: #00f2ff; /* Changes text to neon cyan to match */
 }
-
 .pdf-frame {
   width: 90%;
   height: 100%;
