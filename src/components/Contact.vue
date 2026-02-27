@@ -80,62 +80,113 @@ export default {
 </script>
 
 <style scoped>
+/* Ensure padding doesn't mess up widths */
+* {
+  box-sizing: border-box;
+}
+
 .contact-container {
+  /* Scalability: Takes up 90% of screen until it hits 600px */
+  width: 90%; 
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #f4f4f4;
-  border-radius: 8px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  
+  /* Glassmorphism Effect for space theme */
+  background: rgba(15, 23, 42, 0.4); /* Dark, semi-transparent blue/black */
+  backdrop-filter: blur(10px); /* Blurs the space background slightly behind the box */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle glowing border */
+  border-radius: 12px;
+  
   text-align: center;
+  color: #ffffff; /* Makes text white */
+  font-family: inherit; /* Forces it to use your website's cool font */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Adds depth */
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Automatically spaces out the inputs */
+  width: 100%;
 }
 
 input, textarea {
   width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 1rem;
+  /* Transparent inputs that fit the theme */
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: inherit; /* Inherits your website font */
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth hover/focus effects */
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Make inputs glow slightly when typing */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical; /* Allows user to drag down, but not sideways */
 }
 
 button {
-  padding: 0.7rem 1.5rem;
-  background-color: #18334f;
-  color: yellow;
-  border: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  /* Sleek ghost button design */
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
+/* Inverts button colors when hovering */
 button:hover {
-  background-color: #0c1928;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .success {
-  color: #4CAF50;
+  color: #4ade80; /* Brighter green for dark mode */
   margin-top: 1rem;
 }
 
 .error {
-  color: #F44336;
+  color: #f87171; /* Brighter red for dark mode */
   margin-top: 1rem;
 }
+
 /* --- Mobile Responsive Adjustments --- */
 @media (max-width: 600px) {
   .contact-container {
-    margin: 1rem auto; /* Reduces the outside margin so it fits better on screen */
-    padding: 1.5rem 1rem; /* Shrinks the inside padding to give the text boxes more room */
-    width: 95%; /* Ensures the box doesn't touch the absolute edges of the phone screen */
-  }
-
-  input, textarea {
-    padding: 1rem; /* Slightly larger padding makes text boxes easier to tap on phones */
-  }
-
-  button {
-    width: 100%; /* Stretches the button across the whole form */
-    padding: 1rem; /* Makes the tap target larger for thumbs */
-    font-size: 1.1rem; /* Slightly larger text for the button */
+    width: 95%; /* Takes up more of the screen on small phones */
+    margin: 1.5rem auto;
+    padding: 1.5rem;
   }
 }
 </style>
