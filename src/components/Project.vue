@@ -172,8 +172,22 @@
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+  .projects-page {
+    padding: 60px 1rem; /* Reduces the top padding and shrinks side padding to save space */
+  }
+
   .page-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem; /* Pulls the grid slightly closer to the title */
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* Forces a single column on phones to prevent the 320px overflow issue */
+    gap: 1.5rem; /* Slightly smaller gap between cards */
+  }
+
+  .project-card {
+    padding: 1.5rem; /* Shrinks the inside padding so text has more room to breathe */
   }
 }
 </style>

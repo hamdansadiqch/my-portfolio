@@ -173,16 +173,30 @@ export default {
 
 @media (max-width: 850px) {
   .hero-container {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* Keeps the photo on top */
     text-align: center;
-    padding: 4rem 0;
+    padding: 2rem 0; /* Reduced padding to save screen space */
+    gap: 2rem; /* Shrunk the 5rem gap so the image and text sit closer together */
   }
+  
+  .hero-text h1 {
+    font-size: 2.5rem; /* Scaled down from 4rem so it fits on small phone screens */
+  }
+
   .hero-text p {
+    font-size: 1rem; /* Scaled down slightly for better mobile readability */
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.5rem;
   }
+
   .slideshow-container {
     justify-content: center;
+    width: 100%;
+  }
+
+  .image-wrapper {
+    max-width: 280px; /* Shrinks the image slightly so it doesn't take up the entire phone height */
   }
 }
 </style>

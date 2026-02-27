@@ -306,19 +306,41 @@ const toggleFullscreen = () => {
 }
 
 /* Mobile Responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .gallery-section {
+    padding: 30px 10px; /* Reduces the massive vertical padding on phones */
+  }
+
   .gallery-title {
     font-size: 2.2rem;
+    margin-bottom: 1.5rem; /* Pulls the slideshow closer to the title */
   }
+
   .slideshow-container {
-    max-width: 90%;
+    max-width: 100%; /* Allows the image to fill the screen width on very small phones */
+    border-radius: 12px; /* Slightly smaller border radius for smaller screens */
   }
+
   .references-container {
-    max-width: 90%;
+    max-width: 100%;
+    margin-top: 2rem;
   }
+
+  .reference-item {
+    font-size: 0.85rem; /* Shrinks the reference text slightly to fit better */
+    margin-bottom: 1.5rem; /* Adds space between each distinct reference */
+  }
+
   .controls-btn {
     width: 36px;
     height: 36px;
+  }
+  
+  /* Make the arrows slightly smaller to avoid covering too much of the article text */
+  .prev-btn svg, .next-btn svg {
+    width: 18px;
+    height: 18px;
   }
 }
 </style>

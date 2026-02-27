@@ -83,11 +83,24 @@ export default {
   line-height: 1;
 }
 
+/* --- Mobile Responsive Adjustments --- */
 @media (max-width: 600px) {
+  .footer {
+    padding: 0.6rem 1rem; /* Shrinks the top/bottom padding to keep the fixed bar thin */
+  }
+
   .footer-content {
     flex-direction: column;
-    gap: 10px;
+    gap: 6px; /* Tighter gap between the copyright and the icons */
     text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.65rem; /* Slightly smaller text to save space */
+  }
+
+  .footer-socials {
+    gap: 1.5rem; /* Spreads the icons out slightly more so they are easier to tap with a thumb */
   }
 }
 </style>

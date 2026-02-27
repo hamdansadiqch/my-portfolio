@@ -120,4 +120,22 @@ button:hover {
   color: #F44336;
   margin-top: 1rem;
 }
+/* --- Mobile Responsive Adjustments --- */
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 1rem auto; /* Reduces the outside margin so it fits better on screen */
+    padding: 1.5rem 1rem; /* Shrinks the inside padding to give the text boxes more room */
+    width: 95%; /* Ensures the box doesn't touch the absolute edges of the phone screen */
+  }
+
+  input, textarea {
+    padding: 1rem; /* Slightly larger padding makes text boxes easier to tap on phones */
+  }
+
+  button {
+    width: 100%; /* Stretches the button across the whole form */
+    padding: 1rem; /* Makes the tap target larger for thumbs */
+    font-size: 1.1rem; /* Slightly larger text for the button */
+  }
+}
 </style>

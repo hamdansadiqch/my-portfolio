@@ -95,11 +95,23 @@ strong {
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
-  .title {
-    font-size: 2.5rem;
+  .about-page {
+    padding: 2rem 1rem; /* Reduces the massive 4rem vertical padding so the title isn't pushed too far down */
   }
+
+  .title {
+    font-size: 2.2rem; /* Scaled down slightly more to prevent word wrapping on very narrow phones */
+  }
+
+  .tagline {
+    font-size: 0.95rem; /* Shrinks the subtitle */
+    margin-bottom: 2rem; /* Pulls the card a bit closer to the header */
+  }
+
   .about-card {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Your excellent instinct to reduce the internal card padding */
+    font-size: 1rem; /* Shrinks the paragraph text slightly so it doesn't feel overwhelming */
+    line-height: 1.6; /* Tightens the vertical space between lines of text for easier mobile reading */
   }
 }
 </style>

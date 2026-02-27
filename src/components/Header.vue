@@ -69,4 +69,23 @@ export default {
   color: #000000 !important;
   border-radius: 0; /* Sharp square edges */
 }
+
+/* --- Mobile Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 0; /* Slightly reduces the top/bottom black space on phones */
+  }
+
+  .nav {
+    flex-wrap: wrap; /* The magic rule: lets links drop to the next line */
+    justify-content: center; /* Keeps the wrapped links perfectly centered */
+    gap: 0.25rem; /* Reduces the gap slightly to save space */
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.8rem; /* Reduces the invisible box around the text */
+    font-size: 0.75rem; /* Shrinks the text just a bit */
+    letter-spacing: 0.5px; /* Tightens the letters to fit more words on one line */
+  }
+}
 </style>
