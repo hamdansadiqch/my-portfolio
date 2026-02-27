@@ -24,10 +24,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #000000; /* Forces the background to be black */
 }
 
 h1 {
@@ -59,10 +58,9 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  /* Removed the max-width, margin, and padding to eliminate the gaps */
 }
 
 @media (prefers-color-scheme: light) {
