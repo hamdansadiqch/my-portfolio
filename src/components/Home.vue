@@ -10,6 +10,7 @@
         </p>
         <a href="https://github.com/hamdansadiqch" target="_blank" class="github-btn">
           View My GitHub
+          <i class="fab fa-github"></i>
         </a>
       </div>
 
@@ -93,18 +94,29 @@ export default {
 }
 
 .github-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Puts a nice space between the text and the icon */
+  
   padding: 1rem 2rem;
   background-color: white;
   color: black;
   text-decoration: none;
   font-weight: 700;
   border-radius: 6px;
+  border: 1px solid transparent; 
   transition: all 0.3s ease;
 }
 
+/* ... keep the hover effects from the previous message ... */
+
 .github-btn:hover {
-  background-color: #e0e0e0;
+  /* Transform to a transparent neon button on hover */
+  background-color: rgba(0, 240, 255, 0.05);
+  color: #00f0ff; /* Neon cyan text */
+  border: 1px solid #00f0ff; /* Neon border */
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); /* Glowing drop shadow */
   transform: translateY(-3px);
 }
 
@@ -126,8 +138,11 @@ export default {
   aspect-ratio: 3/4; 
   object-fit: cover;
   border-radius: 16px;
-  border: 1px solid #333;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  
+  /* Apply the glowing neon border */
+  border: 1px solid #00f0ff; 
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3), 0 20px 40px rgba(0,0,0,0.6);
+  
   transition: opacity 0.4s ease-in-out;
 }
 
