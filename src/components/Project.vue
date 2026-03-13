@@ -40,7 +40,7 @@
 
       <div class="project-card">
         <div class="card-header">
-          <span class="icon">📄</span>
+          <span class="icon">⭐</span>
           <h3>Rotating Star Interactive Animation</h3>
         </div>
         <p class="description">
@@ -56,6 +56,25 @@
         </a>
       </div>
     </div>
+
+    <div class="projects-grid">
+        <div class="project-card">
+          <div class="card-header">
+            <span class="icon">🤖⚽🏆</span>
+            <h3>Hamster Robot Soccer RoboCup</h3>
+          </div>
+          <p class="description">
+            A group project to play a 3 v 3 soccer game using hamster robots, utilizing Python and the Hamster API to program autonomous robot behavior and team strategies. Developed the defensive tactics.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Hamster API</span>
+          </div>
+          <a href="https://github.com/daiwik-the-creator/twu-robocup" target="_blank" class="source-button">
+            <i class="fab fa-github"></i> Source
+          </a>
+      </div>
+      </div>
   </main>
 </template>
 
