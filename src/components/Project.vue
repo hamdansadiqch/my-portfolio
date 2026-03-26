@@ -75,6 +75,24 @@
           </a>
       </div>
       </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="card-header">
+            <span class="icon">🧪</span>
+            <h3>SafeChemVRLab</h3>
+          </div>
+          <p class="description">
+            A group project where we created a virtual reality chemistry lab for students to enjoy fun and interactive chemistry experiments while ensuring safety precautions. Developed the virtual reality environment and user interactions using Unity and C#.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+          </div>
+          <a href="https://github.com/hamdansadiqch/SafeChemVRLab" target="_blank" class="source-button">
+            <i class="fab fa-github"></i> Source
+          </a>
+      </div>
+      </div>
   </main>
 </template>
 
