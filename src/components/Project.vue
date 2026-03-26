@@ -3,6 +3,7 @@
     <h1 class="page-title">Projects</h1>
 
     <div class="projects-grid">
+      
       <div class="project-card">
         <div class="card-header">
           <span class="icon">🤖</span>
@@ -55,45 +56,42 @@
           <i class="fab fa-github"></i> Source
         </a>
       </div>
-    </div>
 
-    <div class="projects-grid">
-        <div class="project-card">
-          <div class="card-header">
-            <span class="icon">🤖⚽🏆</span>
-            <h3>Hamster Robot Soccer RoboCup</h3>
-          </div>
-          <p class="description">
-            A group project to play a 3 v 3 soccer game using hamster robots, utilizing Python and the Hamster API to program autonomous robot behavior and team strategies. Developed the defensive tactics.
-          </p>
-          <div class="tech-stack">
-            <span class="tag">Python</span>
-            <span class="tag">Hamster API</span>
-          </div>
-          <a href="https://github.com/daiwik-the-creator/twu-robocup" target="_blank" class="source-button">
-            <i class="fab fa-github"></i> Source
-          </a>
+      <div class="project-card">
+        <div class="card-header">
+          <span class="icon">🤖⚽🏆</span>
+          <h3>Hamster Robot Soccer RoboCup</h3>
+        </div>
+        <p class="description">
+          A group project to play a 3 v 3 soccer game using hamster robots, utilizing Python and the Hamster API to program autonomous robot behavior and team strategies. Developed the defensive tactics.
+        </p>
+        <div class="tech-stack">
+          <span class="tag">Python</span>
+          <span class="tag">Hamster API</span>
+        </div>
+        <a href="https://github.com/daiwik-the-creator/twu-robocup" target="_blank" class="source-button">
+          <i class="fab fa-github"></i> Source
+        </a>
       </div>
+
+      <div class="project-card">
+        <div class="card-header">
+          <span class="icon">🧪</span>
+          <h3>SafeChemVRLab</h3>
+        </div>
+        <p class="description">
+          A group project where we created a virtual reality chemistry lab for students to enjoy fun and interactive chemistry experiments while ensuring safety precautions. Developed the virtual reality environment and user interactions using Unity and C#.
+        </p>
+        <div class="tech-stack">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+        </div>
+        <a href="https://github.com/hamdansadiqch/SafeChemVRLab" target="_blank" class="source-button">
+          <i class="fab fa-github"></i> Source
+        </a>
       </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="card-header">
-            <span class="icon">🧪</span>
-            <h3>SafeChemVRLab</h3>
-          </div>
-          <p class="description">
-            A group project where we created a virtual reality chemistry lab for students to enjoy fun and interactive chemistry experiments while ensuring safety precautions. Developed the virtual reality environment and user interactions using Unity and C#.
-          </p>
-          <div class="tech-stack">
-            <span class="tag">Unity</span>
-            <span class="tag">C#</span>
-          </div>
-          <a href="https://github.com/hamdansadiqch/SafeChemVRLab" target="_blank" class="source-button">
-            <i class="fab fa-github"></i> Source
-          </a>
-      </div>
-      </div>
-  </main>
+
+    </div> </main>
 </template>
 
 <style scoped>
